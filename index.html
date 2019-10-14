@@ -39,5 +39,20 @@
 
     <img src="assets/mountains2.png" alt="Mountains" class="mountains" />
     <img src="assets/forest2.png" alt="Mountains" class="trees" />
+
+    <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+
+    <script>
+      window.onload = function() {
+        lax.setup(); // init
+
+        const updateLax = () => {
+          lax.update(window.scrollY);
+          window.requestAnimationFrame(updateLax);
+        };
+
+        window.requestAnimationFrame(updateLax);
+      };
+    </script>
   </body>
 </html>
