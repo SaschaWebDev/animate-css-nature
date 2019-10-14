@@ -1,1 +1,79 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css?family=Nobile:400,700&display=swap");
+body {
+  margin: 0;
+  height: 100vh;
+  background: #191919;
+  font-family: 'Nobile';
+}
+
+*,
+*:before,
+*:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  padding: 2em;
+  height: 100vh;
+}
+
+.container:first-child {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 10% 30% auto;
+      grid-template-rows: 10% 30% auto;
+}
+
+.container h1 {
+  text-align: center;
+  margin-top: 2em;
+  font-weight: normal;
+  font-size: 3em;
+  line-height: 0.9em;
+}
+
+.container p {
+  line-height: 1.5;
+  color: #c2c2c2;
+}
+
+.container .line {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  width: 50%;
+  border-right: 1px solid white;
+  height: 50%;
+  margin-bottom: 4em;
+  position: relative;
+}
+
+.container .line::after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 11px 11px 0 11px;
+  border-color: white transparent transparent transparent;
+  right: -0.7em;
+  bottom: -2px;
+}
+
+.mountains,
+.trees {
+  /* Stack them on top of each other */
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+
+.mountains {
+  top: 0;
+}
+
+.trees {
+  top: 18%;
+}
+/*# sourceMappingURL=main.css.map */
